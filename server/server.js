@@ -20,8 +20,11 @@ connectDB();
 
 // ================= MIDDLEWARE =================
 app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:3000",
-  credentials: true,
+  origin: [
+    "http://localhost:3000",
+    "https://mern-stack-project-pied-gamma.vercel.app"
+  ],
+  credentials: true
 }));
 
 app.use(express.json());

@@ -1,6 +1,7 @@
 const User = require("../models/User");
 
 const registerUser = async (req, res) => {
+  console.log("Resgister API hit");
   try {
     const user = await User.create(req.body);
     res.status(201).json(user);
